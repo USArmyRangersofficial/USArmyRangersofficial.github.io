@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakty – Emergency Hamburg RP</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- MENU -->
+<div class="nav">
+  <img src="logo.png">
+  <a href="index.html" onclick="navigate(event,'index.html')">Hlavní stránka</a>
+  <a href="team.html" onclick="navigate(event,'team.html')">Admin team</a>
+  <a href="shop.html" onclick="navigate(event,'shop.html')">Obchod</a>
+  <a href="kontakty.html" onclick="navigate(event,'kontakty.html')" class="active">Kontakty</a>
+</div>
+
+<div class="page-content">
+
+  <h1 class="main-title">Kontakty</h1>
+  <p class="main-sub">Jak nás kontaktovat a kdy jsme dostupní</p>
+
+  <!-- PRACOVNÍ DOBA -->
+  <div class="section-block">
+    <h2 class="section-title">⏰ Pracovní doba admin týmu</h2>
+    <div class="hours-table">
+      <div class="hours-row header-row">
+        <span>Den</span>
+        <span>Dostupnost</span>
+        <span>Poznámka</span>
+      </div>
+      <div class="hours-row">
+        <span>Pondělí – Pátek</span>
+        <span class="hours-open">14:00 – 22:00</span>
+        <span>Běžná podpora</span>
+      </div>
+      <div class="hours-row">
+        <span>Sobota</span>
+        <span class="hours-open">10:00 – 23:00</span>
+        <span>Rozšířená doba</span>
+      </div>
+      <div class="hours-row">
+        <span>Neděle</span>
+        <span class="hours-open">12:00 – 21:00</span>
+        <span>Lehčí provoz</span>
+      </div>
+      <div class="hours-note">
+        ⚠️ Mimo pracovní dobu zanech zprávu na Discordu – odpovíme co nejdříve.
+      </div>
+    </div>
+  </div>
+
+  <!-- KONTAKTY NA ČLENY -->
+  <div class="section-block">
+    <h2 class="section-title">👥 Kontakty na členy týmu</h2>
+    <p class="section-text">Kontaktuj správného člena týmu podle tvého problému přes Discord DM nebo ticket.</p>
+
+    <div class="contact-grid">
+
+      <div class="contact-card owner">
+        <div class="contact-role-badge">Owner</div>
+        <div class="contact-name">Alpha team (NRCSpocoyo)</div>
+        <div class="contact-info">
+          <div class="contact-row">
+            <span class="label">Discord:</span>
+            <span class="value">@NRCSpocoyo</span>
+          </div>
+          <div class="contact-row">
+            <span class="label">Kontakt pro:</span>
+            <span class="value">Hlavní rozhodnutí, závažné problémy</span>
+          </div>
+          <div class="contact-row">
+            <span class="label">Člen od:</span>
+            <span class="value">21. 3. 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-card co-owner">
+        <div class="contact-role-badge">Spolu Majitel / Moderátor</div>
+        <div class="contact-name">𝕽𝖆𝕯𝖒𝖊𝕰𝖓9</div>
+        <div class="contact-info">
+          <div class="contact-row">
+            <span class="label">Discord:</span>
+            <span class="value">@RadmeEn9</span>
+          </div>
+          <div class="contact-row">
+            <span class="label">Kontakt pro:</span>
+            <span class="value">Moderování, spolurozhodování</span>
+          </div>
+          <div class="contact-row">
+            <span class="label">Člen od:</span>
+            <span class="value">9. 4. 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-card admin">
+        <div class="contact-role-badge">Zástupce sp. majitele / hl. admin</div>
+        <div class="contact-name">KRAYPS</div>
+        <div class="contact-info">
+          <div class="contact-row">
+            <span class="label">Discord:</span>
+            <span class="value">@KRAYPS</span>
+          </div>
+          <div class="contact-row">
+            <span class="label">Kontakt pro:</span>
+            <span class="value">Adminování, senior admin záležitosti</span>
+          </div>
+          <div class="contact-row">
+            <span class="label">Člen od:</span>
+            <span class="value">25. 4. 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-card admin">
+        <div class="contact-role-badge">hl. admin / web dev</div>
+        <div class="contact-name">Venca.py</div>
+        <div class="contact-info">
+          <div class="contact-row">
+            <span class="label">Discord:</span>
+            <span class="value">@Venca.py</span>
+          </div>
+          <div class="contact-row">
+            <span class="label">Kontakt pro:</span>
+            <span class="value">Web problémy, admin záležitosti</span>
+          </div>
+          <div class="contact-row">
+            <span class="label">Člen od:</span>
+            <span class="value">9. 4. 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-card mod">
+        <div class="contact-role-badge">Senior admin / Moderátor / Ticket tým</div>
+        <div class="contact-name">Vortexík</div>
+        <div class="contact-info">
+          <div class="contact-row">
+            <span class="label">Discord:</span>
+            <span class="value">@Vortexik</span>
+          </div>
+          <div class="contact-row">
+            <span class="label">Kontakt pro:</span>
+            <span class="value">Tickety, moderování</span>
+          </div>
+          <div class="contact-row">
+            <span class="label">Člen od:</span>
+            <span class="value">31. 7. 2025</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-card mod">
+        <div class="contact-role-badge">Moderátor / Ticket tým</div>
+        <div class="contact-name">Slovakia_men2023</div>
+        <div class="contact-info">
+          <div class="contact-row">
+            <span class="label">Discord:</span>
+            <span class="value">@Slovakia_men2023</span>
+          </div>
+          <div class="contact-row">
+            <span class="label">Kontakt pro:</span>
+            <span class="value">Tickety, obecná podpora</span>
+          </div>
+          <div class="contact-row">
+            <span class="label">Člen od:</span>
+            <span class="value">21. 3. 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-card ticket">
+        <div class="contact-role-badge">Ticket tým</div>
+        <div class="contact-name">Mister_viktor</div>
+        <div class="contact-info">
+          <div class="contact-row">
+            <span class="label">Discord:</span>
+            <span class="value">@Mister_viktor</span>
+          </div>
+          <div class="contact-row">
+            <span class="label">Kontakt pro:</span>
+            <span class="value">Tickety, základní podpora</span>
+          </div>
+          <div class="contact-row">
+            <span class="label">Člen od:</span>
+            <span class="value">21. 3. 2026</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DISCORD PŘÍMÝ KONTAKT -->
+  <div class="section-block join-section">
+    <h2 class="section-title">📬 Rychlý kontakt</h2>
+    <p class="section-text">Nejrychlejší způsob jak nás kontaktovat je přes Discord ticket systém.</p>
+    <div class="join-inner">
+      <div class="join-card">
+        <h3>🎫 Otevřít ticket</h3>
+        <p>Nejrychlejší podpora přes Discord ticket systém</p>
+        <a href="https://discord.gg/uzcWT52DjH" target="_blank">
+          <button class="btn-discord">Přejít na Discord</button>
+        </a>
+      </div>
+      <div class="join-card">
+        <h3>📋 Obecný kontakt</h3>
+        <p>Pro obecné dotazy piš do #chat kanálu</p>
+        <a href="https://discord.gg/uyFjBezXKg" target="_blank">
+          <button class="btn-roblox">Otevřít Discord</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <p>© 2026 Emergency Hamburg RP · Vytvořeno s ❤️ pro CZ/SK komunitu</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

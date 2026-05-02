@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rajdhani:wght@400;600&display=swap');
+
+/* ===== RESET & BASE ===== */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Rajdhani', 'Oswald', sans-serif;
+  color: #e0e0e0;
+  background: #0a0a0a;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+body.loaded { opacity: 1; }
+
+/* ===== NAV ===== */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(10px);
+  padding: 10px 20px;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.nav img {
+  width: 40px;
+  margin-right: 20px;
+  border-radius: 6px;
+}
+
+.nav a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 12px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.nav a:hover, .nav a.active { color: #fff; }
+
+/* ===== HERO (logo obrázek) ===== */
+.hero {
+  padding-top: 70px;
+  text-align: center;
+  background: #0a0a0a;
+}
+
+.hero-logo {
+  width: 100%;
+  max-height: 340px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== PAGE CONTENT (vše pod obrázkem) ===== */
+.page-content {
+  background: #0a0a0a;
+  padding: 40px 20px 60px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #fff;
+  margin: 20px 0 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.main-sub {
+  color: #888;
+  font-size: 16px;
+  margin: 0 0 40px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ===== STATS ===== */
+.stats-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.stat-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 20px 30px;
+  min-width: 130px;
+  text-align: center;
+}
+
+.stat-number {
+  font-family: 'Oswald', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #777;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ===== SECTION BLOCKS ===== */
+.section-block {
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+.section-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-left: 3px solid #5865F2;
+  padding-left: 12px;
+  margin-bottom: 18px;
+}
+
+.section-text {
+  color: #aaa;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* ===== GOALS GRID ===== */
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+}
+
+.goal-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.goal-card:hover { border-color: rgba(88,101,242,0.4); }
+
+.goal-icon { font-size: 28px; margin-bottom: 10px; }
+
+.goal-card h3 {
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+
+.goal-card p { color: #888; font-size: 14px; margin: 0; }
+
+/* ===== EVENTS LIST ===== */
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.event-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.event-badge { font-size: 24px; line-height: 1; }
+
+.event-item strong { color: #fff; font-size: 16px; display: block; margin-bottom: 4px; }
+.event-item p { color: #888; margin: 0; font-size: 14px; }
+
+/* ===== JOIN SECTION ===== */
+.join-section { text-align: center; }
+
+.join-inner {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.join-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 24px;
+  min-width: 220px;
+  max-width: 280px;
+}
+
+.join-card h3 { color: #fff; margin: 0 0 8px; font-family: 'Oswald', sans-serif; }
+.join-card p { color: #888; font-size: 14px; margin: 0 0 16px; }
+
+.btn-discord {
+  padding: 10px 20px;
+  background: #5865F2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: background 0.2s, transform 0.15s;
+  box-shadow: 0 0 12px rgba(88,101,242,0.4);
+}
+
+.btn-discord:hover {
+  background: #4752c4;
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(88,101,242,0.6);
+}
+
+.btn-roblox {
+  padding: 10px 20px;
+  background: #e8252d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn-roblox:hover { background: #c41f26; transform: scale(1.03); }
+
+/* ===== KONTAKTY ===== */
+.hours-table {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.hours-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  font-size: 15px;
+  color: #ccc;
+}
+
+.hours-row:last-of-type { border-bottom: none; }
+
+.header-row {
+  background: rgba(255,255,255,0.06);
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.hours-open { color: #4ade80; font-weight: 600; }
+
+.hours-note {
+  padding: 12px 16px;
+  background: rgba(88,101,242,0.08);
+  border-top: 1px solid rgba(88,101,242,0.2);
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* CONTACT CARDS */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.contact-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  padding: 18px;
+  transition: border-color 0.2s;
+}
+
+.contact-card:hover { border-color: rgba(88,101,242,0.35); }
+
+.contact-card.owner { border-top: 2px solid #f59e0b; }
+.contact-card.co-owner { border-top: 2px solid #a78bfa; }
+.contact-card.admin { border-top: 2px solid #5865F2; }
+.contact-card.mod { border-top: 2px solid #34d399; }
+.contact-card.ticket { border-top: 2px solid #60a5fa; }
+
+.contact-role-badge {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #777;
+  margin-bottom: 6px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.contact-name {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.contact-info { display: flex; flex-direction: column; gap: 6px; }
+
+.contact-row { display: flex; gap: 8px; font-size: 14px; }
+.contact-row .label { color: #666; min-width: 80px; }
+.contact-row .value { color: #bbb; }
+
+/* ===== TEAM PAGE ===== */
+.container {
+  text-align: center;
+  margin-top: 80px;
+  max-width: 960px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #0a0a0a;
+}
+
+.container h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 36px;
+  color: #fff;
+  text-transform: uppercase;
+  border-left: 3px solid #5865F2;
+  padding-left: 12px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(84, 84, 84, 0.08);
+  padding: 15px;
+  margin: 10px auto;
+  border-radius: 10px;
+  color: #ccc;
+}
+
+.card h3 { color: #fff; margin-top: 0; font-family: 'Oswald', sans-serif; }
+
+.card-staff { width: 30%; }
+
+.container-staff-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+  min-height: fit-content;
+}
+
+.container-staff {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  padding: 24px;
+  color: #444;
+  font-size: 13px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  background: #0a0a0a;
+}
+
+/* ===== POPUP ===== */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(10,10,10,0.97);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  width: 300px;
+  z-index: 200;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 700px) {
+  .stats-section { gap: 12px; }
+  .stat-card { min-width: 100px; padding: 14px 16px; }
+  .stat-number { font-size: 28px; }
+  .goals-grid { grid-template-columns: 1fr 1fr; }
+  .join-inner { flex-direction: column; align-items: center; }
+  .container-staff-row { flex-direction: column; }
+  .card-staff { width: 100%; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .hours-row { grid-template-columns: 1fr 1fr; }
+  .hours-row span:last-child { display: none; }
+  .header-row span:last-child { display: none; }
+  .main-title { font-size: 28px; }
+}
